@@ -6,7 +6,7 @@
 * Funcao: descricao do que eh o programa
 *************************************************************** */
 
-package model;
+package models;
 
 import exception.ListaVaziaException;
 import exception.ObjetoNaoEncontradoException;

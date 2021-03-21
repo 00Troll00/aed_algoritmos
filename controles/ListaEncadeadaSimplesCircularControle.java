@@ -1,7 +1,7 @@
 /* ***************************************************************
 * Autor: nome(s) do(s) autor(es) do codigo
-* Inicio: 13/03/2021 18:58:45
-* Ultima alteracao: 13/03/2021 23:08:17
+* Inicio: 19/03/2021
+* Ultima alteracao: 
 * Nome: Nome do programa
 * Funcao: descricao do que eh o programa
 *************************************************************** */
@@ -21,9 +21,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import models.ListaEncadeadaSimples;
 
-public class ListaEncadeadaControle implements Initializable{
+import models.ListaEncadeadaSimplesCircular;
+
+public class ListaEncadeadaSimplesCircularControle implements Initializable{
     @FXML Label labelExibicao;
     @FXML Label labelErro;
 
@@ -31,38 +32,23 @@ public class ListaEncadeadaControle implements Initializable{
     @FXML TextField textFieldDepois;
     @FXML TextField textFieldAntes;
     
-
-    private ListaEncadeadaSimples lista;
+    private ListaEncadeadaSimplesCircular lista;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        lista = new ListaEncadeadaSimples();
+        
+        lista = new ListaEncadeadaSimplesCircular();
         labelExibicao.setText("");
         
         imprimirLabel();
     }
     
     @FXML
-    public void adicionarInicio(ActionEvent event){
+    public void adicionar(ActionEvent event){
         try{
             String conteudoLabel = textFieldEntrada.getText();
             Integer inteiro = Integer.parseInt(conteudoLabel);
-            lista.inserirInicio(inteiro);
-        }
-        catch(NumberFormatException e){
-            erroEntradaInvalida();
-        }
-
-        imprimirLabel();
-        textFieldEntrada.setText("");
-    }
-
-    @FXML
-    public void adicionarFim(ActionEvent event){
-        try{
-            String conteudoLabel = textFieldEntrada.getText();
-            Integer inteiro = Integer.parseInt(conteudoLabel);
-            lista.inserirFim(inteiro);
+            lista.inserir(inteiro);
         }
         catch(NumberFormatException e){
             erroEntradaInvalida();
@@ -76,7 +62,7 @@ public class ListaEncadeadaControle implements Initializable{
     public void adicionarDepois(ActionEvent event){
         try{
             Integer inteiro = Integer.parseInt(textFieldDepois.getText());
-            ListaEncadeadaSimples.Element elemento = lista.buscar(inteiro);
+            ListaEncadeadaSimplesCircular.Element elemento = lista.buscar(inteiro);
 
             inteiro = Integer.parseInt(textFieldEntrada.getText());
             elemento.inserirDepois(inteiro);
@@ -98,7 +84,7 @@ public class ListaEncadeadaControle implements Initializable{
     public void adicionarAntes(ActionEvent event){
         try{
             Integer inteiro = Integer.parseInt(textFieldAntes.getText());
-            ListaEncadeadaSimples.Element elemento = lista.buscar(inteiro);
+            ListaEncadeadaSimplesCircular.Element elemento = lista.buscar(inteiro);
 
             inteiro = Integer.parseInt(textFieldEntrada.getText());
             elemento.inserirAntes(inteiro);
@@ -120,7 +106,7 @@ public class ListaEncadeadaControle implements Initializable{
     public void apagar(ActionEvent event){
         try{
             Integer inteiro = Integer.parseInt(textFieldEntrada.getText());
-            lista.extrair(inteiro);
+            lista.apagarNumero(inteiro);
 
             textFieldEntrada.setText("");
         }
@@ -166,4 +152,5 @@ public class ListaEncadeadaControle implements Initializable{
             }
         }, 1000);
     }
+    
 }

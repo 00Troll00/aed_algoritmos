@@ -29,8 +29,18 @@ public class MainControle implements Initializable{
 
     @FXML
     public void abrirListaEncadeadaSimples(ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/lista_encadeada_view.fxml"));
         ListaEncadeadaControle controlador = new ListaEncadeadaControle();
+        abrirJanela(controlador, "/view/lista_encadeada_view.fxml", "Lista Encadeada Simples");
+    }
+
+    @FXML
+    public void abrirListaEncadeadaSimplesCircular(ActionEvent event) throws IOException{
+        ListaEncadeadaSimplesCircularControle controlador = new ListaEncadeadaSimplesCircularControle();
+        abrirJanela(controlador, "/view/lista_encadeada_simples_circular_view.fxml", "Lista Encadeada Simples Circular");
+    }
+
+    public void abrirJanela(Object controlador, String url, String titulo) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(url));
         loader.setController(controlador);
 
         Parent root = loader.load();
@@ -39,7 +49,7 @@ public class MainControle implements Initializable{
 
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Lista Encadeada Simples");
+        stage.setTitle(titulo);
         stage.show();
     }
 }

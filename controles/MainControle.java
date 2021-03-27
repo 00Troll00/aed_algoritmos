@@ -39,6 +39,13 @@ public class MainControle implements Initializable{
         abrirJanela(controlador, "/view/lista_encadeada_simples_circular_view.fxml", "Lista Encadeada Simples Circular");
     }
 
+    @FXML
+    public void abrirListaEncadeadaDupla(ActionEvent event) throws IOException{
+        ListaEncadeadaDuplaControle controlador = new ListaEncadeadaDuplaControle();
+        abrirJanela(controlador, "/view/lista_encadeada_dupla_view.fxml", "Lista Encadeada Dupla");
+    }
+
+    //metodo para abrir as novas janelas
     public void abrirJanela(Object controlador, String url, String titulo) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource(url));
         loader.setController(controlador);

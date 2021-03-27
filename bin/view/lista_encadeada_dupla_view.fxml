@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #5488ff;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+   <children>
+      <Label fx:id="labelExibicao" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="386.0" layoutY="201.0" style="-fx-background-color: #e4ecff; -fx-border-radius: 10; -fx-background-radius: 10;" text="Label" wrapText="true" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <HBox layoutX="300.0" layoutY="359.0" prefHeight="181.0" prefWidth="780.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="300.0" spacing="5.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#adicionarInicio" prefHeight="30.0" prefWidth="165.0" style="-fx-background-color: #e4ecff;" text="Adicionar no inicio">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Region prefHeight="1.0" prefWidth="1.0" HBox.hgrow="ALWAYS" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#adicionarFim" style="-fx-background-color: #e4ecff;" text="Adicionar no final">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#adicionarDepois" prefWidth="165.0" style="-fx-background-color: #e4ecff;" text="Adicionar depois do">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Region prefHeight="2.0" prefWidth="2.0" HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="textFieldDepois" prefHeight="26.0" prefWidth="110.0">
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="80.0" prefWidth="200.0">
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#adicionarAntes" prefHeight="30.0" prefWidth="165.0" style="-fx-background-color: #e4ecff;" text="Adicionar  antes do">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Region prefHeight="2.0" prefWidth="2.0" HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="textFieldAntes" prefHeight="26.0" prefWidth="110.0">
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#apagar" prefWidth="165.0" style="-fx-background-color: #e4ecff;" text="Apagar numero">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="80.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#apagarLista" style="-fx-background-color: #e4ecff;" text="Apagar a lista">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Region prefHeight="200.0" prefWidth="1.0" HBox.hgrow="ALWAYS" />
+            <VBox prefHeight="200.0" prefWidth="300.0">
+               <children>
+                  <Label text="Digite um inteiro e aperte um dos botoes na lateral para efetuar uma ação relacionada a lista a lista" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldEntrada" />
+                  <Region prefHeight="1.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="labelErro" text="Label" textFill="RED" visible="false" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -73,7 +73,7 @@ public class ListaEncadeadaSimplesCircular{
     return this.tail == null;
   }//fim metodo estaVazia
 
-  public void apagarNumero(Object item) throws ObjetoNaoEncontradoException{
+  public void apagarItem(Object item) throws ObjetoNaoEncontradoException{
     Element ponteiro = tail;
     Element anteriorPonteiro;
     if(item != tail.getDado()){

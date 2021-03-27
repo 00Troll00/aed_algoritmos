@@ -8,12 +8,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="241.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="241.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox layoutX="70.0" layoutY="30.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #5488ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirListaEncadeadaSimples" style="-fx-background-color: #e4ecff;" text="Lista Encadeada Simples" />
             <Button layoutX="15.0" layoutY="15.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirListaEncadeadaSimplesCircular" style="-fx-background-color: #e4ecff;" text="Lista Encadeada Simples Circular" />
+            <Button layoutX="15.0" layoutY="45.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirListaEncadeadaDupla" style="-fx-background-color: #e4ecff;" text="Lista Encadeada Dupla" />
             <Region prefHeight="1.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
             <HBox alignment="CENTER_RIGHT">
                <children>
